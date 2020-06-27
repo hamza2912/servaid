@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <!-- Owl-Carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind css -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class='w-full overflow-hidden'>
+        <!-- NavBar Section-->
+        <nav class='flex flex-row justify-between py-5 px-8 fixed w-full sc-nav bg-white z-10 items-center lg:fill-white text-menu-black'>
+            <div class='text-xl'>
+                <img src="./images/logos/Servaid_logo.svg" alt="Servaid Logo">
+            </div>
+            <div>
+                <div class='openNavbtn block lg:hidden header-nav-toggle p-4 ml-4'>
+                    <img src="./images/icons/open-menu.png">
+                </div>
+                <ul class='hidden lg:flex flex-row text-sm font-medium header-nav fixed lg:relative left-0 px-10 py-8 lg:px-0  lg:py-0 shadow lg:shadow-none  w-full lg:bg-transparent bg-white'>
+                    <li class="mr-8">
+                        <a class="mb-6 lg:mb-0 nav-link relative block active uppercase" href="#brands">Brand Story</a>
+                    </li>
+                    <li class="mr-8">
+                        <a class="mb-6 lg:mb-0 nav-link relative block" href="#selling">Store Locator</a>
+                    </li>
+                    <li class="mr-8">
+                        <a class="mb-6 lg:mb-0 nav-link relative block" href="#stories">Blogs</a>
+                    </li>
+                    <li class="mr-8">
+                        <a class="mb-6 lg:mb-0 nav-link relative block" href="#contact">Contact Us</a>
+                    </li>
+                    <li class="lg:hidden mr-8">
+                        <a class="mb-6 lg:mb-0 nav-link relative block" href="#account">My Account</a>
+                    </li>
+                    <li class="lg:hidden mr-8">
+                        <a class="nav-link relative block" href="#cart">My Cart</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='relative hidden lg:block'>
+                <input class='bg-search-input px-10 py-2 rounded' placeholder="Search for health products and medicines." type="search">
+                <i class="far fa-search absolute serach-icon text-content-gray opacity-50"></i>
+            </div>
+            <div class='hidden lg:block'>
+                <a href="#cart">
+                    <img src="./images/icons/cart.svg" alt="Cart Icon">
+                </a>
+            </div>
+            <div class='hidden lg:block'>
+                <button>
+                    <i class="fal fa-user mr-2"></i>My Account</button>
+            </div>
+        </nav>
+        <!-- Blue Navbar Section -->
+        <div class='bg-blue-1100 mt-18 hidden lg:block'>
+            <div class='container mx-auto  py-5'>
+                <ul class='flex flex-row justify-between flex-wrap text-sm text-white'>
+                    <a href="#medicines">
+                        <li>Vitamins and Supplements
+                            <i class="ml-2 far fa-angle-down"></i>
+                        </li>
+                    </a>
+                    <a href="#selling">
+                        <li>Personal Care
+                            <i class="ml-2 far fa-angle-down"></i>
+                        </li>
+                    </a>
+                    <a href="#devices">
+                        <li>Device and Appliance
+                            <i class="ml-2 far fa-angle-down"></i>
+                        </li>
+                    </a>
+                    <a href="#devices">
+                        <li>Hygiene and Household
+                            <i class="ml-2 far fa-angle-down"></i>
+                        </li>
+                    </a>
+                    <a href="#health">
+                        <li>Health and Conditions
+                            <i class="ml-2 far fa-angle-down"></i>
+                        </li>
+                    </a>
+                    <a href="#medicines">
+                        <li>Homoepathy
+                            <i class="ml-2 far fa-angle-down"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <!-- Cover Section -->
+        <div class='bg-intro-image'>
+            <div class='container mx-auto flex flex-start items-center'>
+                <div data-aos="fade-right" class='p-10 mb-16 mt-32 mx-3 lg:mx-0 lg:mt-16 lg:mb-16 bg-cover-box text-white'>
+                    <h2 class='mb-10 font-bold text-3xl'>The store you can depend on!</h2>
+                    <p class='mb-16 text-base w-3/5'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euism</p>
+                    <div class='flex lg:flex-row flex-col'>
+                        <div class='relative'>
+                            <input class='bg-input-cover cover-search-bar px-10 py-1 rounded-sm w-full' placeholder="Search for health products and medicines."
+                                type="search">
+                            <i class="far fa-search absolute serach-icon-cover text-white cursor-pointer"></i>
+                        </div>
+                        <button class='w-1/2 lg:w-1/4 bg-red-700 hover:bg-red-600 lg:px-8 px-4 text-sm py-1 rounded-sm text-white mt-2 lg:mt-0'>Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services Section -->
+        <div id='services' class='bg-blue-1200'>
+            <div class='container mx-auto lg:py-5 py-10'>
+                <div class='flex flex-row justify-between flex-wrap text-white'>
+                    <div data-aos="zoom-in" class='flex flex-row items-center px-10 lg:px-0'>
+                        <img src="./images/icons/Geniune.svg" alt="Geniune Medicines Icon">
+                        <p class='ml-2'>Genius Medicines</p>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="100" class='flex flex-row items-center px-10 lg:px-0 mt-5 lg:mt-0'>
+                        <img src="./images/icons/Timely.svg" alt="Time Icon">
+                        <p class='ml-2'>Timely Delivery</p>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="200" class='flex flex-row items-center px-10 lg:px-0 mt-5 lg:mt-0'>
+                        <img src="./images/icons/return.svg" alt="Return Icon">
+                        <p class='ml-2'>Easy returns and Refunds</p>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="300" class='flex flex-row items-center px-10 lg:px-0 mt-5 lg:mt-0'>
+                        <img src="./images/icons/payments.svg" alt="Payment Icon">
+                        <p class='ml-2'>Secure Payments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Medicine Section -->
+        <div id='medicines' class='container mx-auto px-8 lg:px-0 pt-10'>
+            <h6 class='text-xs text-content-gray uppercase letter-space'>Medicine for you</h6>
+            <h1 class='text-content-blue font-semibold text-3xl'>Explore our product range</h1>
+            <div class='mt-2 flex flex-row justify-between'>
+                <div>
+                    <h6 class='text-xs text-content-gray uppercase letter-space'>View all products</h6>
+                </div>
+                <div class='flex flex-row'>
+                    <img class='left-arrow-btn cursor-pointer' src="./images/icons/left-arrow.svg" alt="left arrow icon">
+                    <img class='right-arrow-btn ml-2 cursor-pointer' src="./images/icons/right-arrow.svg" alt="right arrow icon">
+                </div>
+            </div>
+            <div class='owl-carousel intro-carousel my-16 w-full'>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/Vicks.png" alt="Vicks Product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">Visk First Defence</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Semos Pharmaceuticals (Pvt) Lt
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 1200.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/freeze-spray.png" alt="Freeze Spray product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">Deep Freeze Spray</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/boots-calcium.png" alt="Boots calcium product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">Boots Calcium</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/face-mask.png" alt="face mask product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">Elasticated Face Mask</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popular Categories Secion -->
+        <div id='popular' class='bg-gray'>
+            <div class='container mx-auto px-8 lg:px-0 py-10 flex flex-row justify-between flex-wrap'>
+                <div class='flex flex-col lg:w-1/3 w-full'>
+                    <h6 class='text-xs text-content-gray uppercase text-center lg:text-left letter-space'>Explore</h6>
+                    <h1 class='text-content-blue font-semibold text-3xl text-center lg:text-left mt-2'>Popular Categories</h1>
+                </div>
+                <div class='flex lg:flex-row flex-col text-base text-content-gray mt-5 lg:mt-0 mx-auto lg:mx-0'>
+                    <div data-aos="zoom-in" class='bg-white px-8 py-5 rounded-lg flex flex-col lg:mr-5'>
+                        <img src="images/icons/medicine.svg" alt="medicine icon">
+                        <p class='mt-2'>Medicine</p>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="100" class='bg-white px-8 py-5 rounded-lg flex flex-col lg:mr-5 mt-5 lg:mt-0'>
+                        <img src="images/icons/drug-medical-coronavirus-covid19-hospital.svg" alt="drug icon">
+                        <p class='mt-2'>Consumer</p>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="200" class='bg-white px-8 py-5 rounded-lg flex flex-col lg:mr-5 mt-5 lg:mt-0'>
+                        <img src="images/icons/insurance-clipboard-document-report-security.svg" alt="insurance icon">
+                        <p class='mt-2'>Healthcare</p>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="300" class='bg-white px-8 py-5 rounded-lg flex flex-col lg:mr-5 mt-5 lg:mt-0'>
+                        <img src="images/icons/scalpel.svg" alt="scalpel icon">
+                        <p class='mt-0'>Surgery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Selling Section -->
+        <div id='selling' class='container mx-auto px-8 lg:px-0 bg-white mx-auto py-10'>
+            <h6 class='text-xs text-content-gray uppercase letter-space'>Get Most from</h6>
+            <h1 class='text-content-blue font-semibold text-3xl'>Top Selling Products</h1>
+            <div class='flex flex-row justify-between mt-2'>
+                <div>
+                    <h6 class='text-xs text-content-gray uppercase letter-space'>View all products</h6>
+                </div>
+                <div class='flex flex-row'>
+                    <img class='left-arrow-btn cursor-pointer' src="./images/icons/left-arrow.svg">
+                    <img class='right-arrow-btn ml-2 cursor-pointer' src="./images/icons/right-arrow.svg">
+                </div>
+            </div>
+            <div class='owl-carousel intro-carousel my-16 w-full'>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/61L+PY24WgL._SL1500_.png" alt="Product image">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">The Coldest Sunset</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/accu-chek_instant.png" alt="Accu check product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">The Coldest Sunset</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/weight_management.png" alt="weight product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">The Coldest Sunset</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/rocacc345_101529997052.png" alt="rocacc product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">The Coldest Sunset</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Health concerns Section -->
+    <div id='health' class='bg-gray'>
+        <div class='flex flex-row flex-wrap justify-between container mx-auto px-8 lg:px-0 py-10'>
+            <div class='flex flex-col lg:w-1/3 w-full'>
+                <h6 class='text-xs text-content-gray uppercase text-center lg:text-left letter-space'>Shop by</h6>
+                <h1 class='mt-2 text-content-blue font-semibold text-3xl text-center lg:text-left'>Health Concerns</h1>
+                <p class='w-full lg:w-1/2 text-base text-content-gray opacity-75 text-center lg:text-left'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euism</p>
+            </div>
+            <div class='flex lg:flex-row lg:flex-wrap flex-col text-base text-content-gray mt-5 lg:mt-0 mx-auto lg:mx-0 lg:w-3/5'>
+                <div data-aos="zoom-in" class='bg-white px-8 py-5 rounded-lg flex flex-col lg:mr-5'>
+                    <img src="images/icons/medicine.svg">
+                    <p class='mt-2'>Respiratory Care</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100" class='bg-white px-8 py-5 rounded-lg flex flex-col mt-3 lg:mt-0 lg:mr-5'>
+                    <img src="images/icons/drug-medical-coronavirus-covid19-hospital.svg">
+                    <p class='mt-2'>Diabetes Care</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" class='bg-white px-8 py-5 rounded-lg flex flex-col mt-3 lg:mt-0 lg:mr-5'>
+                    <img src="images/icons/medicine.svg">
+                    <p class='mt-2'>Respiratory Care</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300" class='bg-white px-8 py-5 rounded-lg mt-3 lg:mt-0 flex flex-col'>
+                    <img src="images/icons/drug-medical-coronavirus-covid19-hospital.svg">
+                    <p class='mt-2'>Diabetes Care</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="400" class='bg-white px-8 py-5 rounded-lg flex flex-col mt-3 lg:mr-5'>
+                    <img src="images/icons/medicine.svg">
+                    <p class='mt-2'>Respiratory Care</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="500" class='bg-white px-8 py-5 rounded-lg flex flex-col mt-3 lg:mr-5'>
+                    <img src="images/icons/drug-medical-coronavirus-covid19-hospital.svg">
+                    <p class='mt-2'>Diabetes Care</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="600" class='bg-white px-8 py-5 rounded-lg flex flex-col mt-3 lg:mr-5'>
+                    <img src="images/icons/medicine.svg">
+                    <p class='mt-2'>Respiratory Care</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="700" class='bg-white px-8 py-5 rounded-lg flex flex-col mt-3'>
+                    <img src="images/icons/drug-medical-coronavirus-covid19-hospital.svg">
+                    <p class='mt-2'>Diabetes Care</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Brands Section -->
+    <div id='brands' class='container mx-auto px-8 lg:px-0 bg-white pt-10 flex justify-between flex-wrap'>
+        <div class='flex flex-col lg:w-1/3 w-full'>
+            <h1 class='text-content-blue font-semibold text-3xl'>Our Top Brands</h1>
+            <p class='mt-2 text-base text-content-gray opacity-75 lg:w-2/3 w-full'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euism</p>
+        </div>
+        <div class='lg:w-2/3 w-full my-10 lg:mt-0'>
+            <div class='owl-carousel side-carousel'>
+                <div class="lg:w-3/5 w-4/5 rounded overflow-hidden">
+                    <img class='w-full' src="./images/logos/gsk-logo.svg" alt="GSK Logo">
+                </div>
+                <div class="lg:w-3/5 w-4/5 rounded overflow-hidden">
+                    <img class='w-full' src="./images/logos/getz-logo.svg" alt="GETZ logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Devices Section -->
+    <div id='devices' class='bg-gray'>
+        <div class='container mx-auto px-8 lg:px-0 py-10'>
+            <h6 class='text-xs text-content-gray uppercase letter-space'>Get most from</h6>
+            <h1 class='text-content-blue font-semibold text-3xl'>Devices and Applications</h1>
+            <div class='mt-2 flex flex-row justify-between'>
+                <div>
+                    <h6 class='text-xs text-content-gray uppercase letter-space'>View all products</h6>
+                </div>
+                <div class='flex flex-row'>
+                    <img class='left-arrow-btn cursor-pointer' src="./images/icons/left-arrow.svg">
+                    <img class='right-arrow-btn ml-2 cursor-pointer' src="./images/icons/right-arrow.svg">
+                </div>
+            </div>
+            <div class='owl-carousel intro-carousel mt-12 mb-16 w-full'>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/nurofen.png" alt="Nurofen product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">Nurofen</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/voltarol.png" alt="voltarol product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">Voltarol</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/relief.png" alt="relief product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">Boots Calcium</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/5 rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/products/anadin.png" alt="anadin product">
+                    <div class="px-6 py-4">
+                        <div class="text-base text-content-gray">Anadin Extra</div>
+                        <p class="text-xs text-content-gray opacity-75 my-2">
+                            Titlis Pharma
+                        </p>
+                        <h1 class='text-sm font-bold text-content-blue'>Rs 140.00</h1>
+                        <div class='text-yellow-400 text-base flex flex-row mt-2'>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <i class='fas fa-star'></i>
+                            <p class='ml-2 text-gray text-xs opacity-75 font-thin'>33 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Stories Section -->
+    <div id='stories' class='container mx-auto px-8 lg:px-0 bg-white py-10 flex lg:flex-row lg:justify-between flex-col'>
+        <div class='flex flex-col lg:w-1/3 w-full'>
+            <h6 class='text-xs text-content-gray uppercase letter-space'>Latest at servaid</h6>
+            <h1 class='text-content-blue font-semibold text-3xl'>News and Stories</h1>
+            <p class='mt-2 text-base text-content-gray opacity-75 lg:w-2/3 w-full:'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euism</p>
+            <div class='flex flex-row mt-10'>
+                <img class='stories-left-arrow-btn cursor-pointer' src="./images/icons/left-arrow.svg">
+                <img class='stories-right-arrow-btn ml-2 cursor-pointer' src="./images/icons/right-arrow.svg">
+            </div>
+        </div>
+        <div class='lg:w-2/3 w-full my-10 lg:mt-0'>
+            <div class='owl-carousel stories-carousel'>
+                <div class="lg:w-3/4 w-full rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/Glowdown_Carly_Header.png" alt="Glowdown Image">
+                    <div class="px-6 py-4">
+                        <p class="text-xs text-content-gray opacity-75 uppercase">
+                            5 Jun 2015
+                        </p>
+                        <div class="text-lg text-black font-bold">Don’t let the Winters get in the way of your Health!</div>
+                        <p class="text-xs text-content-gray opacity-75 uppercase font-thin mt-5">
+                            Read More
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:w-3/4 w-full rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./images/el20_homepage_summerreset_d.png" alt="Sumemrset image">
+                    <div class="px-6 py-4">
+                        <p class="text-xs text-content-gray opacity-75 uppercase">
+                            5 Jun 2015
+                        </p>
+                        <div class="text-lg text-black font-bold">Don’t let the Winters get in the way of your Health!</div>
+                        <p class="text-xs text-content-gray opacity-75 uppercase font-thin mt-5">
+                            Read More
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Flex Images -->
+    <div id='contact' class='w-full flex lg:flex-row flex-col'>
+        <div class='bg-red-1200 lg:w-1/3 w-full flex flex-col justify-center text-white lg:pl-24 py-10 lg:py-0 text-center lg:text-left'>
+            <p class='text-xs uppercase font-light'>Stay Connected</p>
+            <h1 class='font-semibold text-3xl'>#Servaid pharmacy</h1>
+            <p class='text-base font-light'>Follow us</p>
+            <a href="#instagram">
+                <h2 class='mt-8 text-sm uppercase font-light'>Go to instagram</h2>
+            </a>
+        </div>
+        <div class='bg-img1 lg:w-1/3 w-full'></div>
+        <div class='bg-img2 lg:w-1/3 w-full'></div>
+    </div>
+    <!-- Footer-->
+    <div class='bg-blue-1200'>
+        <div class='container mx-auto px-8 lg:px-0 py-10 flex lg:flex-row lg:justify-between flex-col text-white'>
+            <div data-aos="fade-right" class='flex flex-col lg:w-1/5 w-full'>
+                <img src="images/logos/servaid-white.svg" alt="Servaid icon in white">
+                <p class='pl-5 mt-6 text-es opacity-50'>© Copyright 2020 Servaid Pharmacy. All rights reserved.</p>
+            </div>
+            <div data-aos="fade-right" data-aos-delay="100" class='flex flex-col lg:w-1/5 w-full mt-3 lg:mt-0'>
+                <h6 class='text-base font-bold'>Navigation</h6>
+                <ul class='text-sm font-thin mt-4'>
+                    <a href="">
+                        <li class='uppercase'>Brand Story</li>
+                    </a>
+                    <a href="#medicines">
+                        <li>Shop</li>
+                    </a>
+                    <a href="#selling">
+                        <li>Store Locator</li>
+                    </a>
+                    <a href="#stories">
+                        <li>Blogs</li>
+                    </a>
+                    <a href="#contact">
+                        <li>Contact Us</li>
+                    </a>
+                </ul>
+            </div>
+            <div data-aos="fade-right" data-aos-delay="200" class='flex flex-col lg:w-1/5 w-full mt-3 lg:mt-0'>
+                <h6 class='text-base font-bold'>Categories</h6>
+                <ul class='text-sm font-thin mt-4'>
+                    <a href="#medicines">
+                        <li>Medicines</li>
+                    </a>
+                    <a href="#medicines">
+                        <li class='uppercase'>Consumer</li>
+                    </a>
+                    <a href="#selling">
+                        <li>Personal Care</li>
+                    </a>
+                    <a href="#medicines">
+                        <li>Food and Beverages</li>
+                    </a>
+                    <a href="#medicines">
+                        <li>Nutrition</li>
+                    </a>
+                    <a href="#devices">
+                        <li>Devices</li>
+                    </a>
+                </ul>
+            </div>
+            <div data-aos="fade-right" data-aos-delay="300" class='flex flex-col lg:w-1/5 w-full mt-3 lg:mt-0'>
+                <h6 class='text-base font-bold'>Support</h6>
+                <ul class='text-sm font-thin mt-4'>
+                    <a href="#privacy">
+                        <li>Privacy Policy</li>
+                    </a>
+                    <a href="#terms">
+                        <li>Terms of Service</li>
+                    </a>
+                </ul>
+                <h6 class='text-base font-bold mt-6'>Find us on</h6>
+                <div class='flex flex-row mt-1'>
+                    <a href="#fb">
+                        <img src="images/logos/fb-icon.svg" alt="Facebook Icon">
+                    </a>
+                    <a href="#insta">
+                        <img class='ml-2' src="images/logos/insta-icon.svg" alt="Insta Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script> AOS.init(); </script>
+    <script src="https://kit.fontawesome.com/a8e3640a1c.js" crossorigin="anonymous"></script>
+    <script data-cfasync src="https://kit.fontawesome.com/25daee8555.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
